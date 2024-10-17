@@ -5,7 +5,7 @@
     <title>{{ year }} - Projeção Populacional</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-white flex flex-col items-center justify-center min-h-screen font-sans">
+<body class="flex flex-col items-center justify-center font-sans">
     <div class="w-full py-4 shadow-md bg-blue-400 text-center">
         <h1 class="text-3xl font-bold mb-6 text-white">Projeção Populacional - Brasil {{ year }}</h1>
         <form method="POST" class="flex items-center max-w-3xl mx-auto px-4">
@@ -17,17 +17,27 @@
                 {% endfor %}
             </select>
             <input type="submit" value="Prever" class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-200">
-        </form>
+        </form> 
     </div>
-
-    <img src="{{ img_url }}" alt="Gráfico de Crescimento Populacional" class="h-auto rounded shadow-md mt-6">
-
-    <div class="w-full py-4 shadow-md bg-blue-400 text-center text-white">
-        <div class="w-3/5 mx-auto">
+    <div class="w-full py-4 shadow-md bg-red-400 text-center text-white">
+        <div class="w-7/8 mx-auto">
             <p>
                 Aviso: A projeção populacional apresentada neste site é apenas demonstrativa e não deve ser considerada uma previsão precisa.
                 Este projeto foi desenvolvido com o intuito de exemplificar a geração de gráficos e a apresentação de dados em um ambiente HTML
                 utilizando Flask. Para informações oficiais sobre crescimento populacional, consulte fontes confiáveis.
+            </p>
+        </div>
+    </div>
+
+    <div class="flex justify-center items-center">
+        <img src="{{ img_url }}" alt="Gráfico de Crescimento Populacional" class="mb-20">
+    </div>
+
+    <div class="fixed bottom-0 w-full py-4 shadow-md bg-gray-700 text-center text-white">
+        <div class="w-4/5 mx-auto">
+            <p>
+                Github:
+                <a href="https://github.com/Corvo97/" class="underline">Corvo97</a>
             </p>
         </div>
     </div>
